@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <link rel="stylesheet" href="{% static "fontawesome/css/fontawesome.min.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+<!--MenuBar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Health</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{%url 'firstapp:index'%}">Home </a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{%url 'firstapp:about' %}">About-Us </a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Doctors </a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'firstapp:services'%}">Speciality</a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Tests </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--MenuBar-->
+
+
+        {%block body_block%}
+        {%endblock%}
+
+<!--footer try 1
+  <div class="card text-center footer">
+      <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="inner_footer">
+        <div class="logo_container">
+          <img src="{% static "images/logo.jpg" %}" alt="">
+        </div>
+
+      </div>
+  </div>
+footer-->
+
+<!--footer-->
+<div class="footer">
+    <div class="inner_footer">
+
+      <div class="logo_container">
+        <img src="firstproject/static/images/logo.jpg" alt="">
+        </div>
+
+      <div class="footer_third">
+          <h1>Need Help?</h1>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer_third">
+          <h1>More</h1>
+          <a href="#">Brochoures</a>
+          <a href="#">Donate</a>
+          <a href="#">Governance</a>
+          <a href="#">Impact</a>
+      </div>
+
+      <div class="footer_third">
+          <h1>Follow Us</h1>
+          <li> <a href="#"> <i class="fa fa-facebook" ></i> </a> </li>
+          <li> <a href="#"> <i class="fa fa-twitter" ></i> </a> </li>
+          <li> <a href="#"> <i class="fa fa-instagram" ></i> </a> </li>
+          <br>
+          <span>
+            @World Merit Registered Charity <br>
+            England & Wales - 116142 <br>
+            Unit 123 The Tea Factory <br>
+            82 Wood Street <br>
+            Liverpool <br>
+            L1 4DQ
+          </span>
+      </div>
+      </div>
+  </div>
+
+
+
+<!--footer-->
+    </body>
+  </html>

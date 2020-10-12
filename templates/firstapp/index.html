@@ -1,47 +1,22 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home Page </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
-  </head>
-  <body>
+{% extends 'firstapp/base.html' %}
+{% block body_block %}
 
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Health</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="{%url 'firstapp:index'%}">Home </a>
-            </li>
+<div class="container">
 
-            <li class="nav-item active">
-              <a class="nav-link" href="{%url 'firstapp:about' %}">About-Us </a>
-            </li>
+  <div class="card mb-3">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+  </div>
+</div>
 
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Doctors </a>
-            </li>
 
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'firstapp:services'%}">Speciality</a>
-            </li>
 
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Tests </a>
-            </li>
 
-          </ul>
-        </div>
-      </nav>
-    </div>
 
     <div class="container">
 
@@ -56,18 +31,36 @@
     </div>
 
     <div class="container">
-  	<div class="box"></div>
-  	<div class="box"></div>
-  	<div class="box"></div>
-  	<div class="box"></div>
-  	<div class="box"></div>
+  	<div class="box">
+      	                Dr. Inderjit Singh Parmar <br>
+                        MBBS, Diploma in Venereology <br>
+                        Venereologist, Dermatologist <br>
+                        65	Years’ Experience Overall (63 years as specialist)
+</div>
+  	<div class="box">  	Dr. S.B. Nagori <br>
+                        MD - (Med. & Thera.), MBBS <br>
+                        Cardiologist<br>
+                        47 Years’ Experience Overall
+</div>
+  	<div class="box">  	Dr. Aparajita Saha<br>
+                        BSc - Dietitics / Nutrition, Diploma in Diet and Nutrition Therapist<br>
+                        Dietitian/Nutritionist, Sports Nutritionist<br>
+                        42 Years’ Experience Overall (42 years as specialist)
+</div>
+  	<div class="box">  	Dr. Jayashree Reddy<br>
+                        MBBS, DGO, MD - Obstetrics & Gynaecology<br>
+                        Infertility Specialist, Gynecologist, Laparoscopic Surgeon (Obs & Gyn)<br>
+                        41 Years’ Experience Overall (38 years as specialist)
+</div>
+<div class="box">       MBBS, MD - Dermatology, Diploma in Dermatology<br>
+                        Dermatologist, Cosmetologist<br>
+                        43 Years’ Experience Overall (40 years as specialist)
+</div>
+<div class="box">      	Dr. Asha Khatri<br>
+                        MD - Obstetrtics & Gynaecology<br>
+                        Gynaecologist, Mumbai<br>
+                        43 Years’ Experience
+</div>
     </div>
 
-    {%block body_block%}
-    {%endblock%}
-
-
-
-
-  </body>
-</html>
+{% endblock %}
